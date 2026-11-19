@@ -51,7 +51,7 @@ Set `$env:DOTFOUND_PORTABLE = '1'` first for a portable copy, `$env:DOTFOUND_DES
 shortcut, or `$env:DOTFOUND_VERSION = 'v0.1.0-alpha.1'` for a specific release. The script checks the
 download against the release's checksums before it runs anything.
 
-**Linux and macOS** (installs for your user, no sudo):
+**Linux** (installs for your user, no sudo; macOS joins when its build is in the release):
 
 ```sh
 curl -fsSL https://github.com/Joshspeakman/dotfound/releases/latest/download/install.sh | sh
@@ -93,7 +93,8 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 - **Smart filters.** Genre, series, platform, era and source.
 - **No more shader stutter** (Windows): with [Preheat](https://github.com/Joshspeakman/SCSKiller)
   installed, dotFound offers to compile a game's shaders before you play it.
-- **Uninstalls cleanly**, through the game's own uninstaller or launcher, or to the Recycle Bin.
+- **Uninstalls cleanly**, through the game's own uninstaller or launcher, or to the Recycle Bin (the Trash
+  on Linux).
 - **Light.** Idle, it uses about 0.02% CPU; minimised or while you play, it lets go of its memory.
 
 <p align="center">
@@ -110,7 +111,8 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 | GOG, Epic, Xbox, Battle.net, uninstall list | ✔ | — (Windows stores) | — |
 | Portable folders | ✔ | Native games in `~/Games` and folders you add | In testing |
 | Windows `.exe` games outside Steam | ✔ | Through Wine, when installed | — |
-| Artwork, music, layouts, themes, controllers | ✔ | ✔ | In testing |
+| Artwork, layouts, themes | ✔ | ✔ | In testing |
+| Music and controllers | ✔ | Built in, not yet tested on Linux | In testing |
 | Shader pre-compiling (Preheat) | ✔ | — | — |
 
 Linux needs a desktop session (X11 or Wayland), OpenGL and glibc 2.35 or newer.
