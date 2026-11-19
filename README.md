@@ -27,8 +27,8 @@
 
 <p align="center"><img src="docs/cover-flow.png" alt="dotFound in Cover flow: Half-Life, with its artwork, description and play time"></p>
 
-> **Beta.** dotFound 0.1 beta is feature-complete and stable in daily use on Windows; Linux is newer and
-> macOS is in testing. Please report anything odd in [Issues](https://github.com/Joshspeakman/dotfound/issues).
+> **Beta.** dotFound 0.1 beta is feature-complete and stable in daily use on Windows; Linux and macOS are
+> newer. Please report anything odd in [Issues](https://github.com/Joshspeakman/dotfound/issues).
 
 ## Built in Rust, built to stay out of the way
 
@@ -50,7 +50,7 @@ and quiet next to the games it launches:
 | **Windows 10 / 11** (x64) | [**dotFound-Setup.exe**](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-Setup.exe) | Installer for your user, no admin needed |
 | Windows, portable | [dotFound-windows-x64.zip](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-windows-x64.zip) | Unzip anywhere, run `dotFound.exe` |
 | **Linux** (x86_64) | [dotFound-linux-x86_64.tar.gz](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-linux-x86_64.tar.gz) | Ubuntu 22.04+, Debian 12+, Fedora 36+, SteamOS, or any distro with glibc 2.35+. Or use the one-line install below |
-| **macOS** | Coming soon | Watch the [releases](https://github.com/Joshspeakman/dotfound/releases) |
+| **macOS 11+** (Apple silicon and Intel) | [dotFound-macos.tar.gz](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-macos.tar.gz) | Unpack, move **dotFound launcher.app** to Applications. Or use the one-line install below |
 
 These links always point at the newest release. Every release also lists its files with
 [SHA-256 checksums](https://github.com/Joshspeakman/dotfound/releases/latest/download/SHA256SUMS.txt).
@@ -58,6 +58,12 @@ These links always point at the newest release. Every release also lists its fil
 **Windows says "Windows protected your PC"?** Beta builds aren't code-signed yet. Click **More info**,
 then **Run anyway**. You can check the download against `SHA256SUMS.txt` first
 (`Get-FileHash dotFound-Setup.exe`).
+
+**macOS says the app "can't be opened" or is from an unidentified developer?** The Mac build isn't
+notarized by Apple yet. The first time, right-click (or Control-click) **dotFound launcher** and choose
+**Open**, then **Open** again; or in **System Settings → Privacy & Security**, click **Open Anyway**. Or
+in Terminal: `xattr -dr com.apple.quarantine "/Applications/dotFound launcher.app"`. The one-line install
+below does this for you. Check the download first with `shasum -a 256 dotFound-macos.tar.gz`.
 
 ## Install from the command line
 
@@ -71,7 +77,7 @@ Set `$env:DOTFOUND_PORTABLE = '1'` first for a portable copy, `$env:DOTFOUND_DES
 shortcut, or `$env:DOTFOUND_VERSION = 'v0.1.0-beta.1'` for a specific release. The script checks the
 download against the release's checksums before it runs anything.
 
-**Linux** (installs for your user, no sudo; macOS joins when its build is in the release):
+**Linux and macOS** (installs for your user, no sudo: Linux into `~/.local`, macOS into `~/Applications`):
 
 ```sh
 curl -fsSL https://github.com/Joshspeakman/dotfound/releases/latest/download/install.sh | sh
@@ -150,15 +156,20 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 
 | | Windows | Linux | macOS |
 |---|---|---|---|
-| Steam games | ✔ | ✔ (native and Flatpak Steam) | In testing |
-| GOG, Epic, Xbox, Battle.net, uninstall list | ✔ | — (Windows stores) | — |
-| Portable folders | ✔ | Native games in `~/Games` and folders you add | In testing |
-| Windows `.exe` games outside Steam | ✔ | Through Wine, when installed | — |
-| Artwork, layouts, themes | ✔ | ✔ | In testing |
-| Music and controllers | ✔ | Built in, not yet tested on Linux | In testing |
+| Steam games | ✔ | ✔ (native and Flatpak Steam) | ✔ (play time from Steam) |
+| Games installed as apps | — | — | ✔ Apps in Applications filed as games, with their own icons |
+| Emulators and frontends | ✔ | ✔ | ✔ DuckStation, PCSX2, Dolphin, RetroArch, ES-DE… as apps |
+| GOG, Epic, Xbox, Battle.net, uninstall list | ✔ | — (Windows stores) | — (Windows stores) |
+| Portable folders | ✔ | Native games in `~/Games` and folders you add | Native games in `~/Games` and folders you add |
+| Windows `.exe` games outside Steam | ✔ | Through Wine, when installed | Through Wine, when installed |
+| Half-Life and Source mods | ✔ | ✔ | ✔ Through Steam |
+| Artwork, layouts, themes | ✔ | ✔ | ✔ |
+| Updates from inside the app | ✔ | ✔ | ✔ |
+| Music and controllers | ✔ | Built in, not yet tested on Linux | Built in, not yet tested on macOS |
 | Shader pre-compiling (Preheat) | ✔ | — | — |
 
-Linux needs a desktop session (X11 or Wayland), OpenGL and glibc 2.35 or newer.
+Linux needs a desktop session (X11 or Wayland), OpenGL and glibc 2.35 or newer. macOS needs macOS 11 or
+newer; the app is a universal build for Apple silicon and Intel Macs.
 
 ## Privacy
 
@@ -167,9 +178,9 @@ about the games it finds: the Steam store, GOG, Wikipedia, the libretro thumbnai
 it downloads the LaunchBox Games Database's public catalogue (about 110 MB, once a month, without sending
 any game names); and SteamGridDB and ScreenScraper only if you add a key or login. To look for updates
 it asks GitHub for dotFound's latest release (Settings → About turns this off). Your library, settings and play
-history stay on your PC (`%APPDATA%\dotFound`; `~/.local/share/dotFound` on Linux). Keys and passwords
-you enter are encrypted for your Windows user on Windows; on Linux they are scrambled with a key file
-that only your user can read.
+history stay on your PC (`%APPDATA%\dotFound`; `~/.local/share/dotFound` on Linux;
+`~/Library/Application Support/dotFound` on macOS). Keys and passwords you enter are encrypted for your
+Windows user on Windows; on Linux and macOS they are scrambled with a key file that only your user can read.
 
 ## License
 
