@@ -84,7 +84,8 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
   recognised from the install itself and shown under their own name (Zelda 64: Recompiled, Dusklight,
   Ship of Harkinian…), with the game they bring back, their authors, version and project page.
 - **Real artwork for every game.** Covers, backdrops, logos and icons from Steam, GOG, console box art,
-  GitHub and SteamGridDB (optional free key) — and when nothing exists, dotFound draws a cover itself.
+  GitHub, the LaunchBox Games Database and SteamGridDB (optional free key) — and when nothing exists,
+  dotFound draws a cover itself.
   Nothing is left blank. ScreenScraper (videos, manuals, more box art) is built in too; in this alpha it
   needs a ScreenScraper developer login entered in Settings, and a built-in one is on the way.
 - **Real music only.** A game's theme is its own soundtrack (a Steam soundtrack, the music it ships with,
@@ -125,7 +126,8 @@ Linux needs a desktop session (X11 or Wayland), OpenGL and glibc 2.35 or newer.
 
 dotFound has no accounts and sends no analytics. To find artwork and details it asks public sources
 about the games it finds: the Steam store, GOG, Wikipedia, the libretro thumbnail library and GitHub;
-and SteamGridDB and ScreenScraper only if you add a key or login. Your library, settings and play
+it downloads the LaunchBox Games Database's public catalogue (about 110 MB, once a month, without sending
+any game names); and SteamGridDB and ScreenScraper only if you add a key or login. Your library, settings and play
 history stay on your PC (`%APPDATA%\dotFound`; `~/.local/share/dotFound` on Linux). Keys and passwords
 you enter are encrypted for your Windows user on Windows; on Linux they are scrambled with a key file
 that only your user can read.
