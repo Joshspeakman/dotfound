@@ -1,0 +1,83 @@
+dotFound launcher
+Copyright (c) 2026 Joshspeakman (https://github.com/Joshspeakman). All rights reserved.
+
+END USER LICENSE
+
+This is a legal agreement between you and the author of dotFound launcher ("dotFound", "the
+software"). By installing or using the software you agree to it. If you don't agree, don't install
+or use it.
+
+1. What you may do
+
+   You may download the official releases of dotFound from
+   https://github.com/Joshspeakman/dotfound/releases, install them on computers you own or control,
+   and use them free of charge for your own personal, non-commercial purposes.
+
+2. What you may not do
+
+   Except as this license expressly allows, you may not, and may not help or allow anyone else to:
+
+   a. copy, publish, redistribute, mirror, re-host, sell, rent, lease, lend, or sublicense the
+      software or any part of it, whether free of charge or not;
+   b. modify the software, translate it, or create derivative works based on it, including
+      launchers, front-ends or other products that copy its code, its design, its look and feel, or
+      its distinctive features;
+   c. remove, change, or rebrand the software, or distribute it (changed or unchanged) under any
+      other name, logo, or identity;
+   d. use the software, or any part of it, in a commercial product or service, or to provide a
+      paid service to others;
+   e. decompile, disassemble, or reverse engineer the software, except to the extent that
+      applicable law expressly permits it despite this limitation;
+   f. remove or alter any copyright, trademark, or other notice in the software.
+
+3. Source code
+
+   No license to the source code is granted. Any access you may be given to the source code
+   (for example, to test or review it) does not grant any right to use, copy, modify, or
+   distribute it, and must be kept confidential.
+
+4. Names, logo and brand
+
+   "dotFound", "dotFound launcher", the ".found" wordmark, the tagline "every game you forgot you
+   had.found.", and the dotFound icon (a search lens around a glowing dot) are the author's
+   trademarks and trade dress, whether or not registered. You may not use them, or anything
+   confusingly similar, to name, describe, or promote any other software, product, or service.
+   You may refer to dotFound by name to say truthfully that you use it or to review it.
+
+5. Third-party components and content
+
+   The software includes open-source components that are licensed to you under their own
+   licenses, listed with their full texts in THIRD-PARTY-NOTICES.txt. Nothing in this license
+   limits your rights under those licenses.
+
+   Game names, artwork, logos, videos, and descriptions that the software shows belong to their
+   respective owners. The software fetches them from public sources to show you your own library;
+   no rights in them are granted to you or claimed by the author.
+
+6. Ownership
+
+   The software is licensed, not sold. The author keeps all right, title, and interest in it,
+   including all copies, updates, and its source code, design, and documentation.
+
+7. No warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. You use
+   it at your own risk, including when it uninstalls or deletes games you ask it to remove.
+
+8. Limitation of liability
+
+   TO THE FULLEST EXTENT PERMITTED BY LAW, THE AUTHOR IS NOT LIABLE FOR ANY CLAIM, DAMAGES, OR
+   OTHER LIABILITY, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM OR IN CONNECTION WITH THE
+   SOFTWARE OR ITS USE, INCLUDING LOST DATA, SAVES, OR GAMES.
+
+9. Termination
+
+   This license ends automatically if you break any of its terms. When it ends you must stop
+   using the software and delete all copies of it.
+
+10. Everything else
+
+   The author may update this license for future versions. If any part of it can't be enforced,
+   the rest still applies. Permission for anything this license doesn't allow (for example, a
+   commercial or redistribution license) must be given in writing by the author.

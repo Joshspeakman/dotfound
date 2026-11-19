@@ -1,0 +1,6 @@
+*.sh text eol=lf
+*.desktop text eol=lf
+*.rs text eol=lf
+*.png binary
+*.ico binary
+*.bmp binary
