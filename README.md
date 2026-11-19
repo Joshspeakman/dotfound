@@ -6,6 +6,10 @@
 <p align="center"><em>every game you forgot you had.found.</em></p>
 
 <p align="center">
+  <a href="https://ko-fi.com/speakerjosh"><img src="https://img.shields.io/badge/Buy_me_a_Continue_%7C_%245-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Buy me a Continue on Ko-fi"></a>
+</p>
+
+<p align="center">
   A clean, fast game launcher that finds every game on your PC — Steam, GOG, Epic, Xbox, Battle.net,
   installers, portable folders, recompiled and decompiled ports — dresses each one in real artwork,
   and puts them all on one shelf.
@@ -136,10 +140,10 @@ with their licenses, in `THIRD-PARTY-NOTICES.txt` inside every download.
 
 Game names and artwork belong to their owners.
 
-## Support
+## Insert Coin
 
-If you get some use out of this, you can buy me a coffee on Ko-fi.
+If this saved you some time (or saved you from buying something twice), you can buy me a Continue on Ko-fi. It's $5 and it keeps me building stuff like this.
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/speakerjosh)
+[![Buy me a Continue on Ko-fi](https://img.shields.io/badge/Buy_me_a_Continue_%7C_%245-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/speakerjosh)
 
 <p align="center"><sub>Copyright © 2026 Joshspeakman. All rights reserved.</sub></p>
