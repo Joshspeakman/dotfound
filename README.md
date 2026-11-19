@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  A clean, fast game launcher that finds every game on your PC — Steam, GOG, Epic, Xbox, Battle.net,
+  A clean, fast, lightweight game launcher, written in Rust, that finds every game on your PC — Steam, GOG, Epic, Xbox, Battle.net,
   installers, portable folders, mods, recompiled and decompiled ports, and the emulators you play them
   with — dresses each one in real artwork, and puts them all on one shelf.
 </p>
@@ -29,6 +29,19 @@
 
 > **Beta.** dotFound 0.1 beta is feature-complete and stable in daily use on Windows; Linux is newer and
 > macOS is in testing. Please report anything odd in [Issues](https://github.com/Joshspeakman/dotfound/issues).
+
+## Built in Rust, built to stay out of the way
+
+dotFound is a single native program written in **Rust**: no Electron, no web browser inside, no
+runtime to install and no background service. It draws itself straight on the GPU, so it stays small
+and quiet next to the games it launches:
+
+| | |
+|---|---|
+| Program | about **11 MB** (the installer is under 6 MB) |
+| Memory | about **100 MB** with a full shelf of artwork on screen |
+| CPU while idle | about **0.01%**: it only redraws when something moves |
+| While you play | it minimises, unloads its artwork and sleeps until the game closes |
 
 ## Download
 
@@ -121,7 +134,8 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
   installed, dotFound offers to compile a game's shaders before you play it.
 - **Uninstalls cleanly**, through the game's own uninstaller or launcher, or to the Recycle Bin (the Trash
   on Linux).
-- **Light.** Idle, it uses about 0.02% CPU; minimised or while you play, it lets go of its memory.
+- **Light.** A native Rust program: about 11 MB, about 100 MB of memory, about 0.01% CPU when idle
+  (see [Built in Rust](#built-in-rust-built-to-stay-out-of-the-way)).
 
 <p align="center">
   <img src="docs/grid.png" width="49%" alt="Grid layout, Midnight theme, Sky accent: Clair Obscur: Expedition 33 with its screenshots">
