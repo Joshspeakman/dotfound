@@ -1,8 +1,11 @@
 <p align="center">
-  <img src="docs/icon.png" width="112" alt="dotFound launcher icon">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="docs/logo-light.png">
+    <img src="docs/logo-light.png" width="420" alt="dotFound launcher">
+  </picture>
 </p>
 
-<h1 align="center">dotFound launcher</h1>
 <p align="center"><em>every game you forgot you had.found.</em></p>
 
 <p align="center">
@@ -11,8 +14,8 @@
 
 <p align="center">
   A clean, fast game launcher that finds every game on your PC — Steam, GOG, Epic, Xbox, Battle.net,
-  installers, portable folders, recompiled and decompiled ports — dresses each one in real artwork,
-  and puts them all on one shelf.
+  installers, portable folders, mods, recompiled and decompiled ports, and the emulators you play them
+  with — dresses each one in real artwork, and puts them all on one shelf.
 </p>
 
 <p align="center">
@@ -22,9 +25,9 @@
   &nbsp;·&nbsp; <a href="LICENSE.txt">License</a>
 </p>
 
-<p align="center"><img src="docs/cover-flow.png" alt="dotFound in Cover flow: Dungeon Siege, with its GOG and portable copies as two versions of one game"></p>
+<p align="center"><img src="docs/cover-flow.png" alt="dotFound in Cover flow: Half-Life, with its artwork, description and play time"></p>
 
-> **Alpha.** dotFound 0.1 is an early release. It's stable in daily use on Windows; Linux is new and
+> **Beta.** dotFound 0.1 beta is feature-complete and stable in daily use on Windows; Linux is newer and
 > macOS is in testing. Please report anything odd in [Issues](https://github.com/Joshspeakman/dotfound/issues).
 
 ## Download
@@ -34,12 +37,12 @@
 | **Windows 10 / 11** (x64) | [**dotFound-Setup.exe**](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-Setup.exe) | Installer for your user, no admin needed |
 | Windows, portable | [dotFound-windows-x64.zip](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-windows-x64.zip) | Unzip anywhere, run `dotFound.exe` |
 | **Linux** (x86_64) | [dotFound-linux-x86_64.tar.gz](https://github.com/Joshspeakman/dotfound/releases/latest/download/dotFound-linux-x86_64.tar.gz) | Ubuntu 22.04+, Debian 12+, Fedora 36+, SteamOS, or any distro with glibc 2.35+. Or use the one-line install below |
-| **macOS** | Coming in this alpha | Watch the [releases](https://github.com/Joshspeakman/dotfound/releases) |
+| **macOS** | Coming soon | Watch the [releases](https://github.com/Joshspeakman/dotfound/releases) |
 
 These links always point at the newest release. Every release also lists its files with
 [SHA-256 checksums](https://github.com/Joshspeakman/dotfound/releases/latest/download/SHA256SUMS.txt).
 
-**Windows says "Windows protected your PC"?** Alpha builds aren't code-signed yet. Click **More info**,
+**Windows says "Windows protected your PC"?** Beta builds aren't code-signed yet. Click **More info**,
 then **Run anyway**. You can check the download against `SHA256SUMS.txt` first
 (`Get-FileHash dotFound-Setup.exe`).
 
@@ -52,7 +55,7 @@ irm https://github.com/Joshspeakman/dotfound/releases/latest/download/install.ps
 ```
 
 Set `$env:DOTFOUND_PORTABLE = '1'` first for a portable copy, `$env:DOTFOUND_DESKTOP = '1'` for a desktop
-shortcut, or `$env:DOTFOUND_VERSION = 'v0.1.0-alpha.1'` for a specific release. The script checks the
+shortcut, or `$env:DOTFOUND_VERSION = 'v0.1.0-beta.1'` for a specific release. The script checks the
 download against the release's checksums before it runs anything.
 
 **Linux** (installs for your user, no sudo; macOS joins when its build is in the release):
@@ -81,14 +84,26 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
   Windows uninstall list, and games anywhere on your drives: dotFound looks through every folder for
   clear signs of a game (a store's marker, an engine's files, game-only middleware), so you don't add
   folders by hand. One entry per game, even when you own it twice: pick which **version** plays.
+- **Tells games apart, even in one folder.** Games Steam installs together (Half-Life, Counter-Strike,
+  Team Fortress Classic and Day of Defeat share one folder) each get their own entry, and so do mods
+  that are games of their own (a Half-Life mod like Brutal Half-Life, a Source mod) — started the way
+  Steam starts them, with their own play time.
+- **Emulators and frontends too.** DuckStation, PCSX2, RPCS3, Dolphin, Cemu, RetroArch, ES-DE and more
+  are found and listed, tagged *Emulator* or *Frontend* so they never pass for games (Settings can
+  hide them).
 - **Knows what recomps are.** Recompilations, decompilation ports, source ports and emulated games are
   recognised from the install itself and shown under their own name (Zelda 64: Recompiled, Dusklight,
   Ship of Harkinian…), with the game they bring back, their authors, version and project page.
 - **Real artwork for every game.** Covers, backdrops, logos and icons from Steam, GOG, console box art,
   GitHub, the LaunchBox Games Database and SteamGridDB (optional free key) — and when nothing exists,
-  dotFound draws a cover itself.
-  Nothing is left blank. ScreenScraper (videos, manuals, more box art) is built in too; in this alpha it
-  needs a ScreenScraper developer login entered in Settings, and a built-in one is on the way.
+  dotFound draws a cover itself. Matches are checked: a mod never takes the art of the game it's built
+  on, a sequel never the first game's. Nothing is left blank. ScreenScraper (videos, manuals, more box
+  art) is built in too; for now it needs a ScreenScraper developer login entered in Settings.
+- **Your pick, your pictures.** *Choose artwork* shows everything the sources offer for a game, side by
+  side, for its box art, background and logo; or drop in your own picture. Your choice stays, whatever
+  gets fetched later.
+- **Your info.** *Edit info* lets you write or correct a game's description, genres, developer,
+  publisher, release date and players.
 - **Real music only.** A game's theme is its own soundtrack (a Steam soundtrack, the music it ships with,
   or its project's files) — never trailer audio. Or play your own music instead.
 - **Four layouts, any window.** Cover flow, Grid, List and Wheel, in four themes and eight accent
@@ -100,6 +115,8 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 - **Hide games** you don't want on the shelf. Hidden games open from Settings, behind a PIN if you like.
 - **Updates itself.** dotFound checks for a new release when it starts (you can turn that off), and
   installs it in place, checked against the release's checksums, keeping your settings and library.
+  It waits until you close the game you're playing, and if something stops it (no connection,
+  GitHub's hourly limit), it says so.
 - **No more shader stutter** (Windows): with [Preheat](https://github.com/Joshspeakman/SCSKiller)
   installed, dotFound offers to compile a game's shaders before you play it.
 - **Uninstalls cleanly**, through the game's own uninstaller or launcher, or to the Recycle Bin (the Trash
@@ -107,10 +124,13 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 - **Light.** Idle, it uses about 0.02% CPU; minimised or while you play, it lets go of its memory.
 
 <p align="center">
-  <img src="docs/grid.png" width="49%" alt="Grid layout, Midnight theme, Sky accent">
-  <img src="docs/list.png" width="49%" alt="List layout, Teal accent">
+  <img src="docs/grid.png" width="49%" alt="Grid layout, Midnight theme, Sky accent: Clair Obscur: Expedition 33 with its screenshots">
+  <img src="docs/list.png" width="49%" alt="List layout, Teal accent: PCSX2, found and tagged as an emulator">
 </p>
-<p align="center"><img src="docs/wheel.png" width="70%" alt="Wheel layout, Arcade theme"></p>
+<p align="center">
+  <img src="docs/wheel.png" width="49%" alt="Wheel layout, Arcade theme, Coral accent: Vampire Survivors with its gameplay video">
+  <img src="docs/choose-artwork.png" width="49%" alt="Choose artwork for Diablo: box art, backgrounds and logos from GOG and SteamGridDB">
+</p>
 
 ## Platforms
 
