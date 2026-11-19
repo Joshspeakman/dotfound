@@ -78,8 +78,9 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 ## What it does
 
 - **Finds everything.** Steam (including libraries Steam forgot), GOG, Epic, Xbox, Battle.net, the
-  Windows uninstall list, portable game folders, and folders you add. One entry per game, even when
-  you own it twice: pick which **version** plays.
+  Windows uninstall list, and games anywhere on your drives: dotFound looks through every folder for
+  clear signs of a game (a store's marker, an engine's files, game-only middleware), so you don't add
+  folders by hand. One entry per game, even when you own it twice: pick which **version** plays.
 - **Knows what recomps are.** Recompilations, decompilation ports, source ports and emulated games are
   recognised from the install itself and shown under their own name (Zelda 64: Recompiled, Dusklight,
   Ship of Harkinian…), with the game they bring back, their authors, version and project page.
@@ -96,6 +97,9 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
   right button prompts for the one in your hands.
 - **Jump back in.** It opens on the game you played last, with play time from Steam and from dotFound.
 - **Smart filters.** Genre, series, platform, era and source.
+- **Hide games** you don't want on the shelf. Hidden games open from Settings, behind a PIN if you like.
+- **Updates itself.** dotFound checks for a new release when it starts (you can turn that off), and
+  installs it in place, checked against the release's checksums, keeping your settings and library.
 - **No more shader stutter** (Windows): with [Preheat](https://github.com/Joshspeakman/SCSKiller)
   installed, dotFound offers to compile a game's shaders before you play it.
 - **Uninstalls cleanly**, through the game's own uninstaller or launcher, or to the Recycle Bin (the Trash
@@ -127,7 +131,8 @@ Linux needs a desktop session (X11 or Wayland), OpenGL and glibc 2.35 or newer.
 dotFound has no accounts and sends no analytics. To find artwork and details it asks public sources
 about the games it finds: the Steam store, GOG, Wikipedia, the libretro thumbnail library and GitHub;
 it downloads the LaunchBox Games Database's public catalogue (about 110 MB, once a month, without sending
-any game names); and SteamGridDB and ScreenScraper only if you add a key or login. Your library, settings and play
+any game names); and SteamGridDB and ScreenScraper only if you add a key or login. To look for updates
+it asks GitHub for dotFound's latest release (Settings → About turns this off). Your library, settings and play
 history stay on your PC (`%APPDATA%\dotFound`; `~/.local/share/dotFound` on Linux). Keys and passwords
 you enter are encrypted for your Windows user on Windows; on Linux they are scrambled with a key file
 that only your user can read.
