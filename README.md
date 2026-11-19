@@ -134,4 +134,10 @@ with their licenses, in `THIRD-PARTY-NOTICES.txt` inside every download.
 
 Game names and artwork belong to their owners.
 
+## Support
+
+If you get some use out of this, you can buy me a coffee on Ko-fi.
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/speakerjosh)
+
 <p align="center"><sub>Copyright © 2026 Joshspeakman. All rights reserved.</sub></p>
