@@ -123,6 +123,17 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
   gets fetched later.
 - **Your info.** *Edit info* lets you write or correct a game's description, genres, developer,
   publisher, release date and players.
+- **Fix a match, Plex-style.** *Fix match* searches by title and year, with Steam and the LaunchBox
+  Games Database side by side, so the 1998 game never wears the 2024 one's art.
+- **Right-click any game** (or long-press it) for Play, Favorite, a status (Playing, Backlog, Finished)
+  and everything else: its folder, its match, its info, its artwork, launch options, hide or uninstall.
+- **Sort it your way.** A–Z, recently added, most played, release date or size, with your favorites
+  first if you like (as EmulationStation does). A controller's triggers jump a letter at a time, and
+  *Random* picks something when you can't decide.
+- **Launch options** for any game dotFound starts, and for Steam games. On Linux, pick the Proton a
+  Windows game runs with: Steam's own or a custom build such as GE-Proton.
+- **Add a game by hand**: drop a program, app or folder a scan didn't find on the window.
+- **Starts with your computer**, if you like (Settings → Look).
 - **Real music only.** A game's theme is its own soundtrack (a Steam soundtrack, the music it ships with,
   or its project's files) — never trailer audio. Or play your own music instead.
 - **Four layouts, any window.** Cover flow, Grid, List and Wheel, in four themes and eight accent
@@ -130,7 +141,7 @@ Silent install for scripts and deployment: `dotFound-Setup.exe /VERYSILENT /SUPP
 - **Mouse, keyboard, touch and controllers.** Xbox, PlayStation, Nintendo and generic pads, with the
   right button prompts for the one in your hands.
 - **Jump back in.** It opens on the game you played last, with play time from Steam and from dotFound.
-- **Smart filters.** Genre, series, platform, era and source.
+- **Smart filters.** Genre, series, platform, era, source and your own status.
 - **Hide games** you don't want on the shelf. Hidden games open from Settings, behind a PIN if you like.
 - **Updates itself.** dotFound checks for a new release when it starts (you can turn that off), and
   installs it in place, checked against the release's checksums, keeping your settings and library.
