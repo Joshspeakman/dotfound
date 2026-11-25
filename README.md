@@ -30,6 +30,16 @@
 > **Beta.** dotFound 0.1 beta is feature-complete and stable in daily use on Windows; Linux and macOS are
 > newer. Please report anything odd in [Issues](https://github.com/Joshspeakman/dotfound/issues).
 
+## No setup: install it, and it finds your games
+
+There's nothing to set up. Install dotFound, open it, and it scans your computer by itself. You don't
+sign in to Steam, GOG, Epic, Xbox or Battle.net, link any accounts, connect any launchers or point it at
+any folders. It reads what's already installed, straight from your drives, so the first time it opens
+your games are already on the shelf, with their artwork on the way.
+
+It's fire and forget. Install something new later and press **Rescan** (or F5), and it's there too.
+Keys for extra artwork sources are optional and live in Settings, out of the way.
+
 ## Built in Rust, built to stay out of the way
 
 dotFound is a single native program written in **Rust**: no Electron, no web browser inside, no
